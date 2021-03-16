@@ -27,8 +27,17 @@
                     
                         <div class="col-lg-6"> <!--card 1-->
                             <div class="card-box ribbon-box">
-                                <div class="ribbon ribbon-danger float-left">  <i class="mdi mdi-voice mr-1"></i>{{$user->title}}</div>
-                                
+
+                                <div class="plyr__video-embed" id="player">
+                                    <iframe
+                                        src="{{$user->link}}"
+                                        allowfullscreen
+                                        allowtransparency
+                                        allow="autoplay"
+                                    >
+                                    </iframe>
+                                </div>
+                                {{-- <div class="ribbon ribbon-danger float-left">  <i class="mdi mdi-voice mr-1"></i>{{$user->title}}</div>
                                 <div class="ribbon-content">
                                         <div class="carousel-item active">
                                             <img src="{{ asset('public/assets/images/disablebanner.png') }}" alt="" height="60">
@@ -48,7 +57,7 @@
                                             @endif
                                         </h4>
 
-                                </div>
+                                </div> --}}
 
                             </div>
 
