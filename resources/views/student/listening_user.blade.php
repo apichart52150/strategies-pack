@@ -35,7 +35,7 @@
                                     <div class="ribbon ribbon-success float-left"><i class="remixicon-volume-up-fill mr-1"></i>{{$user->title}}</div>
                                         <div class="ribbon-content">
 
-                                            <div class="plyr__video-embed" id="player">
+                                            <div class="plyr__video-embed player">
                                                 <iframe
                                                     src="{{$user->link}}"
                                                     allowfullscreen
@@ -80,18 +80,10 @@
 
     <script src="https://cdn.plyr.io/3.6.3/plyr.js"></script>
     <script>
-        const player = new Plyr('.player', {
-            invertTime: true,
-            controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'settings', 'fullscreen'],
-            keyboard: {
-                global: true
-            },
-            tooltips: { controls: true, seek: true },
-            youtube: { noCookie: false, rel: 0, showinfo: 0, iv_load_policy: 3, modestbranding: 1 }
-        });
+        const player = Array.from(document.querySelectorAll('.player')).map(p => new Plyr(p));
 
         window.oncontextmenu = function(e) {
-        	e.preventDefault()
+            e.preventDefault()
         }
     </script>
 
