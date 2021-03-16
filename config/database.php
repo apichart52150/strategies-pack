@@ -39,12 +39,16 @@ return [
             'prefix' => '',
         ],
 
+        // DB_DATABASE=newcambr_isac
+        // DB_USERNAME=newcambr_isac
+        // DB_PASSWORD=08Newc@mb12
+
         'mysql' => [
             'driver' => 'mysql',
             'host' => 'localhost',
-            'database' => 'mocktestdb',
-            'username' => 'root',
-            'password' =>'',
+            'database' => 'newcambr_isac',
+            'username' => 'newcambr_isac',
+            'password' =>'08Newc@mb12',
             'charset' => 'utf8',
             'collation' => 'utf8_general_ci',
             'prefix' => '',
