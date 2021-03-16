@@ -68,7 +68,7 @@
 
                     <script src="https://cdn.plyr.io/3.6.3/plyr.js"></script>
                     <script>
-                        const player = new Plyr({{$user->title}}, {
+                        const $user->title = new Plyr($user->title, {
                             invertTime: true,
                             controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'settings', 'fullscreen'],
                             keyboard: {
