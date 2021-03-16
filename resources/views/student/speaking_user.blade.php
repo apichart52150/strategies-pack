@@ -34,26 +34,27 @@
 
                                 <div class="ribbon ribbon-danger float-left">  <i class="mdi mdi-voice mr-1"></i>{{$user->title}}</div>
                                 <div class="ribbon-content">
-                                        <div class="plyr__video-embed" id="player">
-                                            <iframe
-                                                src="{{$user->link}}"
-                                                allowfullscreen
-                                                allowtransparency
-                                                allow="autoplay"
-                                            >
-                                            </iframe>
-                                        </div>
-                                        <h4>
-                                            @if($user->file_path ==".")
-                                            
-                                                <button class="btn btn-dark disabled">No sample answer</button>
-                                            
-                                            @else
-
-                                                <a download href ="{{ asset('storage/app/public/file/'.$user->file_path) }}" class="btn btn-icon waves-effect waves-light btn-primary"> <i class="fe-download"></i> Sample answer PDF </a>
+                                    
+                                    <div class="plyr__video-embed" id="player">
+                                        <iframe
+                                            src="{{$user->link}}"
+                                            allowfullscreen
+                                            allowtransparency
+                                            allow="autoplay"
+                                        >
+                                        </iframe>
+                                    </div>
+                                    <h4>
+                                        @if($user->file_path ==".")
                                         
-                                            @endif
-                                        </h4>
+                                            <button class="btn btn-dark disabled mt-2">No sample answer</button>
+                                        
+                                        @else
+
+                                            <a download href ="{{ asset('storage/app/public/file/'.$user->file_path) }}" class="btn btn-icon waves-effect waves-light btn-primary mt-2"> <i class="fe-download"></i> Sample answer PDF </a>
+                                    
+                                        @endif
+                                    </h4>
 
                                 </div>
 
