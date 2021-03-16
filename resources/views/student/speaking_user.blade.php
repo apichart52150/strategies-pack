@@ -30,9 +30,6 @@
 
                                 <div class="ribbon ribbon-danger float-left">  <i class="mdi mdi-voice mr-1"></i>{{$user->title}}</div>
                                 <div class="ribbon-content">
-                                        <div class="carousel-item active">
-                                            <img src="{{ asset('public/assets/images/disablebanner.png') }}" alt="" height="60">
-                                        </div>
                                         <div class="plyr__video-embed" id="player">
                                             <iframe
                                                 src="{{$user->link}}"
