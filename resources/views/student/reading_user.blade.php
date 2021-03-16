@@ -34,7 +34,7 @@
                                     <div class="ribbon ribbon-primary float-left"> <i class="remixicon-eye-fill mr-1"></i>{{$user->title}}</div>
                                     <div class="ribbon-content">
 
-                                        <div class="plyr__video-embed" id="player">
+                                        <div class="plyr__video-embed player">
                                             <iframe
                                                 src="{{$user->link}}"
                                                 allowfullscreen
@@ -76,7 +76,7 @@
 
     <script src="https://cdn.plyr.io/3.6.3/plyr.js"></script>
     <script>
-        const player = new Plyr('#player', {
+        const player = new Plyr('.player', {
             invertTime: true,
             controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'settings', 'fullscreen'],
             keyboard: {
