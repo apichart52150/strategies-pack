@@ -34,7 +34,7 @@
                                     <div class="ribbon ribbon-primary float-left"> <i class="remixicon-eye-fill mr-1"></i>{{$user->title}}</div>
                                     <div class="ribbon-content">
 
-                                        <div class="plyr__video-embed player">
+                                        <div class="plyr__video-embed" id="{{$user->title}}">
                                             <iframe
                                                 src="{{$user->link}}"
                                                 allowfullscreen
@@ -66,6 +66,23 @@
 
                     @endif
 
+                    <script src="https://cdn.plyr.io/3.6.3/plyr.js"></script>
+                    <script>
+                        const player = new Plyr({{$user->title}}, {
+                            invertTime: true,
+                            controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'settings', 'fullscreen'],
+                            keyboard: {
+                                global: true
+                            },
+                            tooltips: { controls: true, seek: true },
+                            youtube: { noCookie: false, rel: 0, showinfo: 0, iv_load_policy: 3, modestbranding: 1 }
+                        });
+
+                        window.oncontextmenu = function(e) {
+                            e.preventDefault()
+                        }
+                    </script>
+
                 @endforeach
 
             </div> <!--End Row-->    
@@ -74,21 +91,6 @@
                     
     </div> <!--end content --> 
 
-    <script src="https://cdn.plyr.io/3.6.3/plyr.js"></script>
-    <script>
-        const player = new Plyr('.player', {
-            invertTime: true,
-            controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'settings', 'fullscreen'],
-            keyboard: {
-                global: true
-            },
-            tooltips: { controls: true, seek: true },
-            youtube: { noCookie: false, rel: 0, showinfo: 0, iv_load_policy: 3, modestbranding: 1 }
-        });
-
-        window.oncontextmenu = function(e) {
-        	e.preventDefault()
-        }
-    </script>
+    
 
 @endsection
