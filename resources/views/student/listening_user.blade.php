@@ -1,7 +1,11 @@
 @extends('layouts.student_layout')
 
-{{-- <meta http-equiv="Content-Security-Policy" 
-content="frame-src https://docs.google.com;"> --}}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+<link rel="stylesheet" href="https://cdn.plyr.io/3.6.3/plyr.css" />
+
+
 
 @section('content')
 
@@ -73,6 +77,24 @@ content="frame-src https://docs.google.com;"> --}}
         
                
     </div> <!--end content --> 
+
+
+    <script src="https://cdn.plyr.io/3.6.3/plyr.js"></script>
+    <script>
+        const player = new Plyr('.player', {
+            invertTime: true,
+            controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'settings', 'fullscreen'],
+            keyboard: {
+                global: true
+            },
+            tooltips: { controls: true, seek: true },
+            youtube: { noCookie: false, rel: 0, showinfo: 0, iv_load_policy: 3, modestbranding: 1 }
+        });
+
+        window.oncontextmenu = function(e) {
+        	e.preventDefault()
+        }
+    </script>
 
 
     
