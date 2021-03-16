@@ -29,39 +29,32 @@ content="frame-src https://docs.google.com;"> --}}
                         @if($user->topic == "listening")
                             <div class="col-lg-6"> 
                                 <div class="card-box ribbon-box">
-
-                                    <div class="plyr__video-embed" id="player">
-                                        <iframe
-                                            src="{{$user->link}}"
-                                            allowfullscreen
-                                            allowtransparency
-                                            allow="autoplay"
-                                        >
-                                        </iframe>
-                                    </div>
-                                
-                                    {{-- <div class="ribbon ribbon-success float-left"><i class="remixicon-volume-up-fill mr-1"></i>{{$user->title}}</div>
+                                    <div class="ribbon ribbon-success float-left"><i class="remixicon-volume-up-fill mr-1"></i>{{$user->title}}</div>
                                         <div class="ribbon-content">
-                                            <div class="carousel-item active">
-                                                <img src="{{ asset('public/assets/images/disablebanner.png') }}" alt="" height="60">
-                                            </div>
 
-                                            <iframe class="w-100" height="320"  
-                                                src="{{$user->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                                            </iframe>
+                                            <div class="plyr__video-embed" id="player">
+                                                <iframe
+                                                    src="{{$user->link}}"
+                                                    allowfullscreen
+                                                    allowtransparency
+                                                    allow="autoplay"
+                                                >
+                                                </iframe>
+                                            </div>
                                             <h4>
                                                 @if($user->file_path ==".")
                                                 
-                                                    <button class="btn btn-dark disabled">No sample answer</button>
+                                                    <button class="btn btn-dark disabled mt-2">No sample answer</button>
                                                     
                                                 @else
 
-                                                    <a download href ="{{ asset('storage/app/public/file/'.$user->file_path) }}" class="btn btn-icon waves-effect waves-light btn-primary"> <i class="fe-download"></i> Sample answer PDF </a>
+                                                    <a download href ="{{ asset('storage/app/public/file/'.$user->file_path) }}" class="btn btn-icon waves-effect waves-light btn-primary mt-2"> <i class="fe-download"></i> Sample answer PDF </a>
                                                 
                                                 @endif
                                             </h4>
+
                                         </div>
-                                    </div>     --}}
+                                    </div>    
 
                                 </div>
 

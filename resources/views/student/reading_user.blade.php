@@ -31,8 +31,6 @@
 
                             <div class="col-lg-6"> <!--card 1-->
                                 <div class="card-box ribbon-box">
-
-                                   
                                     <div class="ribbon ribbon-primary float-left"> <i class="remixicon-eye-fill mr-1"></i>{{$user->title}}</div>
                                     <div class="ribbon-content">
 
