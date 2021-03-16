@@ -28,23 +28,21 @@
                             <div class="col-lg-6"> <!--card 1-->
                                 <div class="card-box ribbon-box">
 
-                                    <div class="plyr__video-embed" id="player">
-                                        <iframe
-                                            src="{{$user->link}}"
-                                            allowfullscreen
-                                            allowtransparency
-                                            allow="autoplay"
-                                        >
-                                        </iframe>
-                                    </div>
-                                    {{-- <div class="ribbon ribbon-primary float-left"> <i class="remixicon-eye-fill mr-1"></i>{{$user->title}}</div>
+                                   
+                                    <div class="ribbon ribbon-primary float-left"> <i class="remixicon-eye-fill mr-1"></i>{{$user->title}}</div>
                                     <div class="ribbon-content">
                                             <div class="carousel-item active">
                                                 <img src="{{ asset('public/assets/images/disablebanner.png') }}" alt="" height="60">
                                             </div>
-                                            <iframe class="w-100" height="280" 
-                                                src="{{$user->link.('?controls=0')}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                                            </iframe>
+                                            <div class="plyr__video-embed" id="player">
+                                                <iframe
+                                                    src="{{$user->link}}"
+                                                    allowfullscreen
+                                                    allowtransparency
+                                                    allow="autoplay"
+                                                >
+                                                </iframe>
+                                            </div>
                                             <h4>
                                                 @if($user->file_path ==".")
                                             
@@ -57,7 +55,7 @@
                                                 @endif
                                             </h4>
                                             
-                                    </div> --}}
+                                    </div>
 
                                 </div>
 
