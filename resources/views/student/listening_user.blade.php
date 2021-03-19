@@ -16,7 +16,7 @@
             <div class="row">
                     <div class="col-12">
                         <div class="page-title-box">
-                            <h4 class="page-title">Reading</h4>
+                            <h4 class="page-title">Listening</h4>
                         </div>
                     </div>
             </div> 
@@ -29,7 +29,7 @@
 
                     @if($user->status == "active")
 
-                        @if($user->topic == "reading")
+                        @if($user->topic == "listening")
 
                             <div class="col-lg-6"> <!--card 1-->
                                 <div class="card-box ribbon-box">
