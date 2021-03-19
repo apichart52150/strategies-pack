@@ -30,31 +30,32 @@
                     @if($user->status == "active")
 
                         @if($user->topic == "listening")
-                            <div class="col-lg-6"> 
+                            <div class="col-lg-6"> <!--card 1-->
                                 <div class="card-box ribbon-box">
-                                    <div class="ribbon ribbon-success float-left"><i class="remixicon-volume-up-fill mr-1"></i>{{$user->title}}</div>
-                                        <div class="ribbon-content">
+                                    <div class="ribbon ribbon-primary float-left"> <i class="remixicon-eye-fill mr-1"></i>{{$user->title}}</div>
+                                    <div class="ribbon-content">
 
-                                            <div class="plyr__video-embed player">
-                                                <iframe
-                                                    src="{{$user->link}}"
-                                                    allowfullscreen
-                                                    allowtransparency
-                                                    allow="autoplay"
-                                                >
-                                                </iframe>
-                                            </div>
-                                            <h4>
-                                                @if($user->file_path ==".")
-                                                
-                                                    <button class="btn btn-dark disabled mt-2">No sample answer</button>
-                                                    
-                                                @else
+                                        <div class="plyr__video-embed player">
+                                            <iframe
+                                                src="{{$user->link}}"
+                                                allowfullscreen
+                                                allowtransparency
+                                                allow="autoplay"
+                                            >
+                                            </iframe>
+                                        </div>
 
-                                                    <a download href ="{{ asset('storage/app/public/file/'.$user->file_path) }}" class="btn btn-icon waves-effect waves-light btn-primary mt-2"> <i class="fe-download"></i> Sample answer PDF </a>
-                                                
-                                                @endif
-                                            </h4>
+                                        <h4>
+                                            @if($user->file_path ==".")
+                                        
+                                                <button class="btn btn-dark disabled mt-2">No sample answer</button>
+                                            
+                                            @else
+    
+                                                <a download href ="{{ asset('storage/app/public/file/'.$user->file_path) }}" class="btn btn-icon waves-effect waves-light btn-primary mt-2"> <i class="fe-download"></i> Sample answer PDF </a>
+                                        
+                                            @endif
+                                        </h4>
 
                                         </div>
                                     </div>    
