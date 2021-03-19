@@ -35,6 +35,7 @@ Auth::routes();
 Route::get('/strategies_home','DataViewController@strategies_home')->name('strategies_home');
 Route::get('success', function () { return view('success'); });
 
+Route::get('/introduction','DataViewController@introduction')->name('introduction');
 Route::get('/listening_user','DataViewController@listening_user')->name('listening_user');
 Route::get('/reading_user','DataViewController@reading_user')->name('reading_user');
 Route::get('/writing_user','DataViewController@writing_user')->name('writing_user');

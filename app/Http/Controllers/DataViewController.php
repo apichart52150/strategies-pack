@@ -20,6 +20,13 @@ class DataViewController extends Controller
         return view('student.strategies_home');
     }
 
+    public function introduction(){
+    	$std_id = session()->get('std_id');
+        $users = DB::select('select * from video');
+        //dd($users);
+        return view('student.introduction',['users'=>$users]);
+    }
+
     public function listening_user(){
     	$std_id = session()->get('std_id');
         $users = DB::select('select * from video');

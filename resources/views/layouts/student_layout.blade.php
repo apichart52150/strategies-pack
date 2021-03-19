@@ -119,6 +119,13 @@
                         <ul class="metismenu" id="side-menu">
 
                             <li class="menu-title">Strategies Pack</li>
+
+                                <li>
+                                    <a href="{{url('introduction')}}" class="waves-effect" style="color:#F1556C">
+                                        <i class="mdi mdi-voice"></i>
+                                        <span> Introduction </span>
+                                    </a>
+                                </li>   
                                             
                                 <li>
                                     <a href="{{url('listening_user')}}" class="waves-effect" style="color:#1ABC9C">
