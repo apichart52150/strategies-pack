@@ -36,6 +36,7 @@
                                 </h2>
                             </div>
                                     
+                            <a href="{{url('introduction')}}" class="btn btn-block btn-lg btn-pink waves-effect waves-light">Introduction</a>
                             <a href="{{url('listening_user')}}" class="btn btn-block btn-lg btn-success waves-effect waves-light">Listening</a>
                             <a href="{{url('reading_user')}}" class="btn btn-block btn-lg btn-primary waves-effect waves-light">Reading</a>
                             <a href="{{url('writing_user')}}" class="btn btn-block btn-lg btn-warning waves-effect waves-light">Writing</a>
