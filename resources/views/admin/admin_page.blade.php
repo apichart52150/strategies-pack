@@ -38,6 +38,7 @@
                                 <option value="active">Active</option>
                                 <option value="disabled">Disabled</option>
                                 <option value="suspended">Suspended</option>
+                                <option value="introduction">Introduction</option>
                                 <option value="listening">Listening</option>
                                 <option value="reading">Reading</option>
                                 <option value="writing">Writing</option>
@@ -92,7 +93,11 @@
                                                 break;
 
                                                 case 'speaking':
-                                                    echo '<span class="badge label-table badge-danger">skeaking</span>';
+                                                    echo '<span class="badge label-table badge-danger">speaking</span>';
+                                                break;
+
+                                                case 'introduction':
+                                                    echo '<span class="badge label-table badge-pink">introduction</span>';
                                                 break;
                                             }
                                         ?>
@@ -203,6 +208,7 @@
                             <div class="form-group">
                                 <label for="field-2" class="control-label">Topic</label>
                                     <select id="demo-foo-filter-status" class="custom-select custom-select" name="topic">
+                                        <option value="introduction">Introduction</option>
                                         <option value="listening">Listening</option>
                                         <option value="reading">reading</option>
                                         <option value="writing">writing</option>
@@ -285,6 +291,7 @@
                                 <label for="field-2" class="control-label">Topic</label>
                                     <select id="demo-foo-filter-status" class="custom-select custom-select" name="topic">
                                     <option value="{{$user->topic}}">{{$user->topic}}</option>
+                                        <option value="introduction">Introduction</option>
                                         <option value="listening">Listening</option>
                                         <option value="reading">reading</option>
                                         <option value="writing">writing</option>

@@ -121,8 +121,8 @@
                             <li class="menu-title">Strategies Pack</li>
 
                                 <li>
-                                    <a href="{{url('introduction')}}" class="waves-effect" style="color:#F1556C">
-                                        <i class="mdi mdi-voice"></i>
+                                    <a href="{{url('introduction')}}" class="waves-effect" style="color:#F672A7">
+                                        <i class=" mdi mdi-view-dashboard"></i>
                                         <span> Introduction </span>
                                     </a>
                                 </li>   

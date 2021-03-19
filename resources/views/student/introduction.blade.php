@@ -33,7 +33,7 @@
 
                             <div class="col-lg-6"> <!--card 1-->
                                 <div class="card-box ribbon-box">
-                                    <div class="ribbon ribbon-primary float-left"> <i class="remixicon-eye-fill mr-1"></i>{{$user->title}}</div>
+                                    <div class="ribbon ribbon-pink float-left"> <i class=" mdi mdi-view-dashboard"></i>{{$user->title}}</div>
                                     <div class="ribbon-content">
 
                                         <div class="plyr__video-embed player">
@@ -53,7 +53,7 @@
                                             
                                             @else
 
-                                                <a download href ="{{ asset('storage/app/public/file/'.$user->file_path) }}" class="btn btn-icon waves-effect waves-light btn-primary mt-2"> <i class="fe-download"></i> Sample answer PDF </a>
+                                                <a download href ="{{ asset('storage/app/public/file/'.$user->file_path) }}" class="btn btn-icon waves-effect waves-light btn-pink mt-2"> <i class="fe-download"></i> Sample answer PDF </a>
                                         
                                             @endif
                                         </h4>
