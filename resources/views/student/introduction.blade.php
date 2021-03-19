@@ -29,7 +29,7 @@
 
                     @if($user->status == "active")
 
-                        @if($user->topic == "intro")
+                        @if($user->topic == "introduction")
 
                             <div class="col-lg-6"> <!--card 1-->
                                 <div class="card-box ribbon-box">

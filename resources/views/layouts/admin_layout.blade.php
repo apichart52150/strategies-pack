@@ -36,7 +36,7 @@
                     <li class="dropdown notification-list">
 
                         <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                        {{Auth::user()->name}}  <i class="mdi mdi-chevron-down"></i> 
+                        {{Auth::user()->name}} </i> 
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
