@@ -16,7 +16,7 @@ class AccessController extends Controller
     public function store($token, $id) {
 
         $user = Ipack::where('std_id', $id)
-            ->first();
+        ->first();
 
         if(env('API_TOKEN') != $token || !$user) {
             abort(401, 'Unauthorized.');
@@ -24,7 +24,7 @@ class AccessController extends Controller
 
         if($user) {
             Auth::guard('ipack')->login($user);
-            return redirect('/home');
+            return redirect('/strategies_home');
         }
     }
 }
