@@ -18,6 +18,7 @@
 
         <link rel="stylesheet" href="{{ asset('public/assets/libs/footable/footable.core.min.css') }}"> 
 
+       
     </head>
 
     
@@ -33,7 +34,7 @@
                     <li class="dropdown notification-list">
 
                         <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                            {{session('name')}}  <i class="mdi mdi-chevron-down"></i> 
+                            {{auth('student')->user()->std_name}}
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
@@ -82,8 +83,8 @@
 
                 @yield('content')
 
-                 <!-- Footer Start -->
-                 <footer class="footer">
+                <!-- Footer Start -->
+                <footer class="footer">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6">
@@ -118,6 +119,13 @@
                         <ul class="metismenu" id="side-menu">
 
                             <li class="menu-title">Strategies Pack</li>
+
+                                <li>
+                                    <a href="{{url('introduction')}}" class="waves-effect" style="color:#F672A7">
+                                        <i class=" mdi mdi-view-dashboard"></i>
+                                        <span> Introduction </span>
+                                    </a>
+                                </li>   
                                             
                                 <li>
                                     <a href="{{url('listening_user')}}" class="waves-effect" style="color:#1ABC9C">
@@ -181,6 +189,7 @@
 
         <!-- init js -->
         <script src="public/assets/js/pages/dashboard-1.init.js"></script>
+
 
     </body>
 

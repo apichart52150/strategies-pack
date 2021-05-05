@@ -36,15 +36,19 @@
                     <li class="dropdown notification-list">
 
                         <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                        {{Auth::user()->name}}  <i class="mdi mdi-chevron-down"></i> 
+                        {{Auth::user()->name}} </i> 
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
-                            <!-- item-->
-                            <a href="{{route('userlogout')}}" class="dropdown-item notify-item">
-                                <i class="remixicon-logout-box-line"></i>
+                            <a href="{{ route('logout') }}" class="dropdown-item notify-item" onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                <i class="mdi mdi-logout"></i>
                                 <span>Logout</span>
                             </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
 
                         </div>
 

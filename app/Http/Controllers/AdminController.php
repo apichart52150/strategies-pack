@@ -3,7 +3,6 @@ namespace App\Http\Controllers;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Session;
 use App\Teacher;
 use App\Model\Classroom;
 use App\Model\DataInsert;
@@ -13,35 +12,9 @@ use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-
-    public function __construct()
+    public static function index()
     {
-    	$this->middleware('auth');
-    }
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-
-    /*
-    *
-    ดึงข้อมูลห้องเรียนมาแสดง
-    *
-    */
- 
-    public static function get_dashboard_v2()//golf
-    {
-        //$data = Classroom::get_classroom_v2();
         $users = DB::select('select * from video');
-
-        //dd(Auth::user()->password);
-
         return view('admin.admin_page',['users'=>$users]);
     } 
 
@@ -105,7 +78,6 @@ class AdminController extends Controller
         $updated_at = Carbon::now();
         $authur = $request->input('authur');
        
-        //dd($updated_at);
         if($file_path != null){
             DB::update('update video set topic = ?, title=? ,updated_at = ?, authur = ?,status=?,link=?,file_path=? where id = ?',[$topic,$title,$updated_at,$authur,$status,$link,$file_path,$id]);
         }else{
