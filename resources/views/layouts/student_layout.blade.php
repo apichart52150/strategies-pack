@@ -37,14 +37,13 @@
                             {{auth('ipack')->user()->std_name}}
                         </a>
 
-                        <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
-                            <!-- item-->
+                        <!-- <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                             <a href="{{route('std_logout')}}" class="dropdown-item notify-item">
                                 <i class="remixicon-logout-box-line"></i>
                                 <span>Logout</span>
                             </a>
 
-                        </div>
+                        </div> -->
 
                     </li>
 
