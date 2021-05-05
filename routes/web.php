@@ -11,6 +11,7 @@
 |
 */
 Route::get('access/{token}/{id}', 'Auth\AccessController@store');
+
 Route::get('/', function() {
     if(Auth::guard('student')->check()) {
         return redirect('strategies_home');

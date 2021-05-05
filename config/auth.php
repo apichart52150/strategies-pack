@@ -48,7 +48,7 @@ return [
 
         'ipack' => [
             'driver' => 'session',
-            'provider' => 'ipacks',
+            'provider' => 'ipack',
         ],
 
         'api' => [
@@ -85,9 +85,9 @@ return [
             'model' => App\Model\Login::class,
         ],
 
-        'ipacks' => [
+        'ipack' => [
             'driver' => 'eloquent',
-            'model' => App\Ipack::class,
+            'model' => App\Ipack::class
         ],
 
         // 'users' => [
