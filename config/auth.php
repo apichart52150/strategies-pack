@@ -46,6 +46,11 @@ return [
             'provider' => 'students',
         ],
 
+        'ipack' => [
+            'driver' => 'session',
+            'provider' => 'ipacks',
+        ],
+
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
@@ -78,6 +83,11 @@ return [
         'students' => [
             'driver' => 'eloquent',
             'model' => App\Model\Login::class,
+        ],
+
+        'ipacks' => [
+            'driver' => 'eloquent',
+            'model' => App\Ipack::class,
         ],
 
         // 'users' => [
