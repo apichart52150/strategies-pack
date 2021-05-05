@@ -26,31 +26,27 @@
                                         <i class="zmdi zmdi-close-circle"></i> Error!</strong> {{session('message')}}</div>
                                 @endif
 
-                                <form class="form-horizontal m-t-20" method="post" action="user_login_fc" autocomplete="off">
+                                <form class="form-horizontal m-t-20" method="post" action="{{ route('fn_login') }}" autocomplete="off">
                                     {{ csrf_field() }}
 
-                                    <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                        <label for="emailaddress">Username</label>
-                                        <input class="form-control" type="text"  name="txtname" placeholder="Username" autocomplete="off" required autofocus>
-                                        @if ($errors->has('email'))
-                                            <span class="help-block">
-                                                <strong>{{ $errors->first('email') }}</strong>
-                                            </span>
-                                        @endif
+                                    <div class="form-group mb-3">
+                                        <label for="username">Username</label>
+                                        <input class="form-control {{ $errors->has('username') ? 'is-invalid' : '' }}" type="text" id="username" name="username" required="" placeholder="Enter your username" value="{{ old('username') }}">
+                                        <span class="invalid-feedback">
+                                            {{ $errors->first('username') }}
+                                        </span>
                                     </div>
 
-                                    <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                                    <div class="form-group mb-3">
                                         <label for="password">Password</label>
-                                        <input class="form-control" type="password"  name="password" placeholder="Password." autocomplete="off" required>
-                                        @if ($errors->has('password'))
-                                            <span class="help-block">
-                                                <strong>{{ $errors->first('password') }}</strong>
-                                            </span>
-                                        @endif
+                                        <input class="form-control {{ $errors->has('password') ? 'is-invalid' : '' }}" type="password" name="password" required="" id="password" placeholder="Enter your password">
+                                        <span class="invalid-feedback">
+                                            {{ $errors->first('password') }}
+                                        </span>
                                     </div>
-            
-                                    <div class="form-group mb-0 text-center" >
-                                    <button type="submit" class="btn btn-primary waves-effect waves-light w-100" style="background-color:#3B73DA">Log in</button>
+
+                                    <div class="form-group mb-0 text-center">
+                                        <button class="btn btn-primary btn-block" type="submit"> Log In </button>
                                     </div>
 
                                 </form>

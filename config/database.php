@@ -45,14 +45,32 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => 'localhost',
-            'database' => 'newcambr_isac',
-            'username' => 'newcambr_isac',
-            'password' =>'08Newc@mb12',
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
+            'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8',
             'collation' => 'utf8_general_ci',
             'prefix' => '',
-            'strict' => false,
+            'strict' => true,
+            'engine' => null,
+        ],
+
+        'ipack' => [
+            'driver' => 'mysql',
+            'host' => env('DB_HOST_3', '127.0.0.1'),
+            'port' => env('DB_PORT_3', '3306'),
+            'database' => env('DB_DATABASE_3', 'forge'),
+            'username' => env('DB_USERNAME_3', 'forge'),
+            'password' => env('DB_PASSWORD_3', ''),
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => 'utf8',
+            'collation' => 'utf8_general_ci',
+            'prefix' => '',
+            'strict' => true,
+            'engine' => null,
         ],
 
         'pgsql' => [

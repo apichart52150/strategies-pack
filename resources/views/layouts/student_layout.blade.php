@@ -34,7 +34,7 @@
                     <li class="dropdown notification-list">
 
                         <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                            {{session('name')}}
+                            {{auth('student')->user()->std_name}}
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
