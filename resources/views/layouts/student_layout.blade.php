@@ -33,9 +33,9 @@
 
                     <li class="dropdown notification-list">
 
-                        <a class="nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                            {{auth('ipack')->user()->std_name}}
-                        </a>
+                        <!-- <a class="nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            Welcome !
+                        </a> -->
 
                         <!-- <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                             <a href="{{route('std_logout')}}" class="dropdown-item notify-item">

@@ -11,8 +11,8 @@ class Ipack extends Authenticatable
 
     protected $connection = 'ipack';
     protected $guard = 'ipack';
-    protected $table = 'student';
-    protected $primaryKey = "std_id";
+    protected $table = 'users';
+    protected $primaryKey = "id";
     protected $rememberTokenName = false;
 
 }

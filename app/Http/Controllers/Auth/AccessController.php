@@ -15,7 +15,7 @@ class AccessController extends Controller
 
     public function store($token, $id) {
 
-        $user = Ipack::where('std_id', $id)
+        $user = Ipack::where('id', $id)
         ->first();
 
         if(env('API_TOKEN') != $token || !$user) {
