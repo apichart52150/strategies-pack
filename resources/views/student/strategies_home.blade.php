@@ -41,6 +41,7 @@
                             <a href="{{url('reading_user')}}" class="btn btn-block btn-lg btn-primary waves-effect waves-light">Reading</a>
                             <a href="{{url('writing_user')}}" class="btn btn-block btn-lg btn-warning waves-effect waves-light">Writing</a>
                             <a href="{{url('speaking_user')}}" class="btn btn-block btn-lg btn-danger waves-effect waves-light">Speaking</a>
+                            <a href="{{url('overview')}}" class="btn btn-block btn-lg btn-info waves-purple waves-light">IELTS OVERVIEW</a>
                                     
                                         
                         </div>

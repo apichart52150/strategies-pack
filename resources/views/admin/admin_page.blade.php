@@ -43,6 +43,7 @@
                                 <option value="reading">Reading</option>
                                 <option value="writing">Writing</option>
                                 <option value="speaking">Speaking</option>
+                                <option value="ielts overview">ielts overview</option>
                             </select>
                         </div>
 
@@ -98,6 +99,10 @@
 
                                                 case 'introduction':
                                                     echo '<span class="badge label-table badge-pink">introduction</span>';
+                                                break;
+
+                                                case 'ielts overview':
+                                                    echo '<span class="badge label-table badge-info">introduction</span>';
                                                 break;
                                             }
                                         ?>
@@ -213,6 +218,7 @@
                                         <option value="reading">reading</option>
                                         <option value="writing">writing</option>
                                         <option value="speaking">speaking</option>
+                                        <option value="ielts overview">IELTS overview</option>
                                     </select>
                             </div>
                         </div>
@@ -296,6 +302,7 @@
                                         <option value="reading">reading</option>
                                         <option value="writing">writing</option>
                                         <option value="speaking">speaking</option>
+                                        <option value="ielts overview">IELTS overview</option>
                                     </select>
                             </div>
                         </div>

@@ -32,6 +32,7 @@ Route::group(['middleware' => 'auth:student,ipack'], function() {
     Route::get('reading_user','DataViewController@reading_user')->name('reading_user');
     Route::get('writing_user','DataViewController@writing_user')->name('writing_user');
     Route::get('speaking_user','DataViewController@speaking_user')->name('speaking_user');
+    Route::get('overview','DataViewController@overview_user')->name('overview_user');
 });
 
 

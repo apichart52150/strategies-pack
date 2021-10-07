@@ -39,5 +39,11 @@ class DataViewController extends Controller
         return view('student.speaking_user',['users'=>$users]);
     }
 
+    public function overview_user(){
+        $users = DB::select('select * from video');
+        return view('student.overview_user',['users'=>$users]);
+    }
+
+
 
 }
