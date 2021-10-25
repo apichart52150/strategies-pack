@@ -15,32 +15,56 @@ class DataViewController extends Controller
     }
 
     public function introduction(){
-        $users = DB::select('select * from video');
+        $users = DB::table('video')
+        ->select('*')
+        ->where('topic', '=', 'introduction')
+        ->orderBy('created_at', 'desc')
+        ->get();
         return view('student.introduction',['users'=>$users]);
     }
 
     public function listening_user(){
-        $users = DB::select('select * from video');
+        $users = DB::table('video')
+        ->select('*')
+        ->where('topic', '=', 'listening')
+        ->orderBy('created_at', 'desc')
+        ->get();
         return view('student.listening_user',['users'=>$users]);
     }
 
     public function reading_user(){
-        $users = DB::select('select * from video');
+       $users = DB::table('video')
+        ->select('*')
+        ->where('topic', '=', 'reading')
+        ->orderBy('created_at', 'desc')
+        ->get();
         return view('student.reading_user',['users'=>$users]);
     }
 
     public function writing_user(){
-        $users = DB::select('select * from video');
+       $users = DB::table('video')
+        ->select('*')
+        ->where('topic', '=', 'writing')
+        ->orderBy('created_at', 'desc')
+        ->get();
         return view('student.writing_user',['users'=>$users]);
     }
 
     public function speaking_user(){
-        $users = DB::select('select * from video');
+       $users = DB::table('video')
+        ->select('*')
+        ->where('topic', '=', 'speaking')
+        ->orderBy('created_at', 'desc')
+        ->get();
         return view('student.speaking_user',['users'=>$users]);
     }
 
     public function overview_user(){
-        $users = DB::select('select * from video');
+       $users = DB::table('video')
+        ->select('*')
+        ->where('topic', '=', 'overview')
+        ->orderBy('created_at', 'desc')
+        ->get();
         return view('student.overview_user',['users'=>$users]);
     }
 
